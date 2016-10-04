@@ -51,9 +51,11 @@ class ViewController: UIViewController {
                     if(json["success"] as! Bool == true){
 //                        self.displayNewAlert(AlertMessage: "Logged in SuccessFull")
                         
-                        let secondViewController:PostTableViewController = PostTableViewController()
                         
-                        self.present(secondViewController, animated: true, completion: nil)
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PostNav") as! PostUINavigationController
+                        self.present(nextViewController, animated:true, completion:nil)
                         
                         
                     }else if(json["success"] as! Bool == false){

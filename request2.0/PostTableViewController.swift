@@ -12,10 +12,29 @@ import Alamofire
 
 class PostTableViewController: UITableViewController {
     
+
     var people = [Person]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+
+        //Create Activity Indicator
+        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        
+        // Position Activity Indicator in the center of the main view
+        myActivityIndicator.center = view.center
+        
+        // If needed, you can prevent Acivity Indicator from hiding when stopAnimating() is called
+        myActivityIndicator.hidesWhenStopped = false
+        
+        // Start Activity Indicator
+        myActivityIndicator.startAnimating()
+        
+        
+        view.addSubview(myActivityIndicator)
+        
         
         let parameters: Parameters = [
             "type": "fresh",
@@ -40,8 +59,9 @@ class PostTableViewController: UITableViewController {
                         
                         self.people.append(person)
                     }
-                                            self.tableView.reloadData()
+                    self.tableView.reloadData()
                     
+                    myActivityIndicator.stopAnimating()
                     
                     
                 }else if(json["success"] as! Bool == false){
@@ -142,8 +162,6 @@ class PostTableViewController: UITableViewController {
 
 
 class Person {
-    var firstName = ""
     var image = ""
     var title = ""
-    var party = ""
 }

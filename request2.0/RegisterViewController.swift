@@ -50,7 +50,10 @@ class RegisterViewController: UIViewController {
                     print("newdata\(json)")
                     
                     if(json["success"] as! Bool == true){
-                        self.displayNewAlert(AlertMessage: "Registered in SuccessFull")
+                        self.displayNewAlert(AlertMessage: "Registered in SuccessFull ! Login here")
+                        let secondViewController:ViewController = ViewController()
+                        self.present(secondViewController, animated: true, completion: nil)
+                        
                     }else if(json["success"] as! Bool == false){
                         self.displayNewAlert(AlertMessage: json["error_messages"] as! String!)
                     }

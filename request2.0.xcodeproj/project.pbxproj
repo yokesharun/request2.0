@@ -13,6 +13,7 @@
 		DC0268D31D9D57AA00542E80 /* request2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC0268D11D9D57AA00542E80 /* request2_0.xcdatamodeld */; };
 		DC0268D51D9D57AA00542E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0268D41D9D57AA00542E80 /* Assets.xcassets */; };
 		DC0268D81D9D57AA00542E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0268D61D9D57AA00542E80 /* LaunchScreen.storyboard */; };
+		DC63D8FB1DA42BA100613AD4 /* PostUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */; };
 		DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */; };
 		DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */; };
 		DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */; };
@@ -31,6 +32,7 @@
 		DC0268D41D9D57AA00542E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC0268D71D9D57AA00542E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0268D91D9D57AA00542E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUINavigationController.swift; sourceTree = "<group>"; };
 		DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				DC0268CC1D9D57AA00542E80 /* ViewController.swift */,
 				DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */,
 				DC0268CE1D9D57AA00542E80 /* Main.storyboard */,
+				DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */,
 				DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */,
 				DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */,
 				DC0268D41D9D57AA00542E80 /* Assets.xcassets */,
@@ -227,6 +230,7 @@
 				DC0268CD1D9D57AA00542E80 /* ViewController.swift in Sources */,
 				DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */,
 				DC0268D31D9D57AA00542E80 /* request2_0.xcdatamodeld in Sources */,
+				DC63D8FB1DA42BA100613AD4 /* PostUINavigationController.swift in Sources */,
 				DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */,
 				DC0268CB1D9D57AA00542E80 /* AppDelegate.swift in Sources */,
 				DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */,
