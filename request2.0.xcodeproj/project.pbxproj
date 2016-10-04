@@ -14,6 +14,8 @@
 		DC0268D51D9D57AA00542E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0268D41D9D57AA00542E80 /* Assets.xcassets */; };
 		DC0268D81D9D57AA00542E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0268D61D9D57AA00542E80 /* LaunchScreen.storyboard */; };
 		DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */; };
+		DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */; };
+		DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */; };
 		E62BA7D37661E8A02D7685E7 /* Pods_request2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5B7494E38785625C2AA9C1 /* Pods_request2_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		DC0268D71D9D57AA00542E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0268D91D9D57AA00542E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				DC0268CC1D9D57AA00542E80 /* ViewController.swift */,
 				DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */,
 				DC0268CE1D9D57AA00542E80 /* Main.storyboard */,
+				DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */,
+				DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */,
 				DC0268D41D9D57AA00542E80 /* Assets.xcassets */,
 				DC0268D61D9D57AA00542E80 /* LaunchScreen.storyboard */,
 				DC0268D91D9D57AA00542E80 /* Info.plist */,
@@ -219,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0268CD1D9D57AA00542E80 /* ViewController.swift in Sources */,
+				DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */,
 				DC0268D31D9D57AA00542E80 /* request2_0.xcdatamodeld in Sources */,
+				DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */,
 				DC0268CB1D9D57AA00542E80 /* AppDelegate.swift in Sources */,
 				DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */,
 			);

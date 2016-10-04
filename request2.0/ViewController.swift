@@ -49,7 +49,13 @@ class ViewController: UIViewController {
                     print("newdata\(json)")
                     
                     if(json["success"] as! Bool == true){
-                        self.displayNewAlert(AlertMessage: "Logged in SuccessFull")
+//                        self.displayNewAlert(AlertMessage: "Logged in SuccessFull")
+                        
+                        let secondViewController:PostTableViewController = PostTableViewController()
+                        
+                        self.present(secondViewController, animated: true, completion: nil)
+                        
+                        
                     }else if(json["success"] as! Bool == false){
                         self.displayNewAlert(AlertMessage: json["error_messages"] as! String!)
                     }
