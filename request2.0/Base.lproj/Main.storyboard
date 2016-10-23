@@ -274,10 +274,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pEA-2B-Eo1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="H5B-7I-59e"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gx6-xq-h26"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pEA-2B-Eo1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYU-GM-uI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

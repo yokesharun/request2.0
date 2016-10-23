@@ -12,8 +12,26 @@ class AddGagViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let save = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(AddGagViewController.save_button) )
+        
+        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddGagViewController.cancel_button) )
+        
+        navigationItem.rightBarButtonItem = save
+        navigationItem.leftBarButtonItem = cancel
 
         // Do any additional setup after loading the view.
+    }
+    
+    func save_button(){
+    
+    }
+    
+    func cancel_button(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PostNav") as! PostUINavigationController
+        self.present(nextViewController, animated:true, completion:nil)
     }
 
     override func didReceiveMemoryWarning() {
