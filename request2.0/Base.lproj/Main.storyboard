@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="request2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginForm" id="BYZ-38-t0r" customClass="ViewController" customModule="request2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -189,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="414"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E2e-ps-Tt4" id="h5z-f1-Go2">
-                                    <frame key="frameInset" width="375" height="413"/>
+                                    <frame key="frameInset" width="375" height="414"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jj0-W5-Hvw">
@@ -246,28 +246,16 @@
                             <outlet property="delegate" destination="u2w-tP-MFK" id="5j8-w4-Bio"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ms7-01-1lk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Mu8-4c-T9b">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="dpD-FU-d0y"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="S48-XG-kTk">
-                            <connections>
-                                <action selector="RefreshButton:" destination="u2w-tP-MFK" id="H8C-ra-o8J"/>
-                                <segue destination="0EW-ip-w4Z" kind="presentation" id="9w8-XK-HDN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Ms7-01-1lk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJI-kd-dfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Gag View Controller-->
         <scene sceneID="V0e-0P-J4Z">
             <objects>
-                <viewController id="Phx-Lt-sti" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddGag" id="Phx-Lt-sti" customClass="AddGagViewController" customModule="request2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQJ-4p-A2k"/>
                         <viewControllerLayoutGuide type="bottom" id="Tyk-Nx-KHg"/>
@@ -287,17 +275,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pEA-2B-Eo1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="H5B-7I-59e">
-                            <connections>
-                                <segue destination="N1b-a9-Hzl" kind="presentation" id="HTq-c5-a3O"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="H5B-7I-59e"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gx6-xq-h26"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYU-GM-uI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4159.1999999999998" y="138.98050974512745"/>
+            <point key="canvasLocation" x="5098.3999999999996" y="138.98050974512745"/>
         </scene>
         <!--PostUI Navigation Controller-->
         <scene sceneID="kOb-6P-TYl">
@@ -317,26 +301,23 @@
             </objects>
             <point key="canvasLocation" x="1552.8" y="138.98050974512745"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="MB5-tS-hTu">
+        <!--Add Gag Navigation Controller-->
+        <scene sceneID="cPi-FN-TEe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0EW-ip-w4Z" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddGagNav" automaticallyAdjustsScrollViewInsets="NO" id="Nmf-YU-pil" customClass="AddGagNavigationController" customModule="request2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6bB-YH-aZg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KqR-C2-l8M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Phx-Lt-sti" kind="relationship" relationship="rootViewController" id="Qdi-OL-7PM"/>
+                        <segue destination="Phx-Lt-sti" kind="relationship" relationship="rootViewController" id="PAY-47-2D0"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CXD-R3-2wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOX-QI-Mq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="138.98050974512745"/>
+            <point key="canvasLocation" x="4159.1999999999998" y="138.98050974512745"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dpD-FU-d0y"/>
-    </inferredMetricsTieBreakers>
 </document>

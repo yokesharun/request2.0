@@ -9,6 +9,14 @@
 import UIKit
 import CoreData
 
+struct defaultsKeys {
+    static let user_id = ""
+    static let token = ""
+    static let avatar = ""
+    static let email = ""
+    static let username = ""
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

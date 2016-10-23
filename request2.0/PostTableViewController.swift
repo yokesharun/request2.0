@@ -11,12 +11,20 @@ import UIKit
 import Alamofire
 
 class PostTableViewController: UITableViewController {
-    
 
     var people = [Person]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // adding button item
+        
+        let add_gag = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(PostTableViewController.new_data))
+        
+        let clear = UIBarButtonItem(title: "clear", style: .plain, target: self, action: #selector(PostTableViewController.clear_data))
+        
+        navigationItem.rightBarButtonItem = add_gag
+        navigationItem.leftBarButtonItem = clear
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
 
@@ -72,6 +80,43 @@ class PostTableViewController: UITableViewController {
         
         //end of request
     }
+    
+    func clear_data(){
+        
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.setValue("", forKey: defaultsKeys.user_id)
+        defaults.setValue("", forKey: defaultsKeys.token)
+        defaults.setValue("", forKey: defaultsKeys.avatar)
+        defaults.setValue("", forKey: defaultsKeys.username)
+        defaults.setValue("", forKey: defaultsKeys.email)
+        
+        defaults.synchronize()
+        
+        self.displayNewAlert(AlertMessage: "cleared")
+
+        
+    }
+    
+    func new_data(){
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let defaults = UserDefaults.standard
+        
+        if(defaults.string(forKey: defaultsKeys.user_id) == ""){
+            
+            let loginview = storyBoard.instantiateViewController(withIdentifier: "LoginForm") as! ViewController
+            self.present(loginview, animated:true, completion:nil)
+        
+        
+        }else{
+        
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddGagNav") as! AddGagNavigationController
+            self.present(nextViewController, animated:true, completion:nil)
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,7 +134,6 @@ class PostTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return people.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell

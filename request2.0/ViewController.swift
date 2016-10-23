@@ -16,10 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +51,16 @@ class ViewController: UIViewController {
                     
                     if(json["success"] as! Bool == true){
 //                        self.displayNewAlert(AlertMessage: "Logged in SuccessFull")
+                        
+                         let defaults = UserDefaults.standard
+
+                        defaults.setValue(json["id"], forKey: defaultsKeys.user_id)
+                        defaults.setValue(json["token"], forKey: defaultsKeys.token)
+                        defaults.setValue(json["avatar"], forKey: defaultsKeys.avatar)
+                        defaults.setValue(json["username"], forKey: defaultsKeys.username)
+                        defaults.setValue(json["email"], forKey: defaultsKeys.email)
+                        
+                        defaults.synchronize()
                         
                         
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
