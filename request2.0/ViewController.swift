@@ -60,6 +60,12 @@ class ViewController: UIViewController {
                         defaults.setValue(json["username"], forKey: defaultsKeys.username)
                         defaults.setValue(json["email"], forKey: defaultsKeys.email)
                         
+                        UserDefaults.standard.setValue(json["id"], forKey: "id")
+                        UserDefaults.standard.setValue(json["token"], forKey: "token")
+                        UserDefaults.standard.setValue(json["avatar"], forKey: "avatar")
+                        UserDefaults.standard.setValue(json["username"], forKey: "username")
+                        UserDefaults.standard.setValue(json["email"], forKey: "email")
+                        
                         defaults.synchronize()
                         
                         
