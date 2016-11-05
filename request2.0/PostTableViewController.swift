@@ -13,6 +13,8 @@ import Alamofire
 class PostTableViewController: UITableViewController {
 
     var people = [Person]()
+    var take = 10
+    var skip = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +48,11 @@ class PostTableViewController: UITableViewController {
         
         let parameters: Parameters = [
             "type": "fresh",
-            "take": 10,
-            "skip" : 0
+            "take": take,
+            "skip" : skip
         ]
+        
+        
 
         Alamofire.request("http://6gag.co/v1/top/gag",method: .get, parameters:parameters).responseJSON { response in
             
@@ -84,15 +88,11 @@ class PostTableViewController: UITableViewController {
     func clear_data(){
         
         
-        let defaults = UserDefaults.standard
-        
-        defaults.setValue("", forKey: defaultsKeys.user_id)
-        defaults.setValue("", forKey: defaultsKeys.token)
-        defaults.setValue("", forKey: defaultsKeys.avatar)
-        defaults.setValue("", forKey: defaultsKeys.username)
-        defaults.setValue("", forKey: defaultsKeys.email)
-        
-        defaults.synchronize()
+        UserDefaults.standard.setValue("", forKey: "id")
+        UserDefaults.standard.setValue("", forKey: "token")
+        UserDefaults.standard.setValue("", forKey: "avatar")
+        UserDefaults.standard.setValue("", forKey: "username")
+        UserDefaults.standard.setValue("", forKey: "email")
         
         self.displayNewAlert(AlertMessage: "cleared")
 
@@ -102,9 +102,8 @@ class PostTableViewController: UITableViewController {
     func new_data(){
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let defaults = UserDefaults.standard
         
-        if(defaults.string(forKey: defaultsKeys.user_id) == ""){
+        if(UserDefaults.standard.value(forKey: "id") == nil){
             
             let loginview = storyBoard.instantiateViewController(withIdentifier: "LoginForm") as! ViewController
             self.present(loginview, animated:true, completion:nil)
@@ -148,6 +147,53 @@ class PostTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = people.count - 1
+        if(indexPath.row == lastElement){
+            // append new data
+            
+            skip = take
+            take = take + 10
+            
+            let parameters: Parameters = [
+                "type": "fresh",
+                "take": take,
+                "skip" : skip
+            ]
+            
+            
+            
+            Alamofire.request("http://6gag.co/v1/top/gag",method: .get, parameters:parameters).responseJSON { response in
+                
+                if let json = response.result.value as? [String: Any] {
+                    
+                    if(json["success"] as! Bool == true){
+                        
+                        guard let results = json["data"] as? [[String:AnyObject]] else { return }
+                        
+                        for result in results {
+                            print(result["title"] as! String)
+                            let person = Person()
+                            
+                            person.title = result["title"] as! String
+                            person.image = result["image"] as! String
+                            
+                            self.people.append(person)
+                        }
+                        self.tableView.reloadData()
+                        
+                        
+                    }else if(json["success"] as! Bool == false){
+                        self.displayNewAlert(AlertMessage: json["error_messages"] as! String!)
+                    }
+                }
+            }
+            
+            
+            
+        }
     }
  
 

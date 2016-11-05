@@ -10,11 +10,13 @@ import UIKit
 
 import Alamofire
 
-class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var category_picker: UIPickerView!
+    @IBOutlet weak var gagImageView: UIImageView!
     
-    var pickerData: [String] = [String]()
+    var pickerData:[(id: Int, name: String)] = []
     
     var picker_value = 0
     
@@ -36,7 +38,7 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         
 //        let defaults = UserDefaults.standard
         
-        print(UserDefaults.standard.value(forKey: "id")!)
+
         
         let parameters: Parameters = [
             "id": UserDefaults.standard.value(forKey: "id")!,
@@ -52,12 +54,17 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
                     guard let results = json["sections"] as? [[String:AnyObject]] else { return }
                     
                     for result in results {
-                        print(result["name"])
                         
-                        self.pickerData.append(result["name"] as! String)
+                        let id = result["id"] as! Int
+                        
+                        let name = result["name"] as! String
+                        
+                        self.pickerData.append((id,name))
+        
                         
                     }
-                    //self.pick.reloadData()
+                    
+                    print(" id \(self.pickerData)")
                     
                     self.category_picker.reloadAllComponents()
                     
@@ -67,11 +74,7 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
                 }
             }
         }
-        
-        
-        
-        // Input data into the Array:
-        pickerData = []
+    
         
     }
     
@@ -82,7 +85,8 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        print(pickerData[row].name)
+        return pickerData[row].name
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -90,7 +94,11 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        picker_value = row
+
+        picker_value = pickerData[row].id
+
+//        inputTaxRate.text = stateInfo[row].tax
+        print( "some data \(picker_value)")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -98,7 +106,15 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     }
     
     func save_button(){
-    
+        
+        let URL = "http://6gag.co/v1/create/gag"
+
+        
+        // uploading a new image here
+        
+        
+        
+        
     }
     
     func cancel_button(){
@@ -115,6 +131,20 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         self.present(alert, animated: true, completion: nil);
     }
 
+    
+    @IBAction func selectImagePicker(_ sender: AnyObject) {
+        let myImagePicker = UIImagePickerController()
+        myImagePicker.delegate = self
+        myImagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        self.present(myImagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        gagImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -51,23 +51,14 @@ class ViewController: UIViewController {
                     
                     if(json["success"] as! Bool == true){
 //                        self.displayNewAlert(AlertMessage: "Logged in SuccessFull")
-                        
-                         let defaults = UserDefaults.standard
 
-                        defaults.setValue(json["id"], forKey: defaultsKeys.user_id)
-                        defaults.setValue(json["token"], forKey: defaultsKeys.token)
-                        defaults.setValue(json["avatar"], forKey: defaultsKeys.avatar)
-                        defaults.setValue(json["username"], forKey: defaultsKeys.username)
-                        defaults.setValue(json["email"], forKey: defaultsKeys.email)
                         
                         UserDefaults.standard.setValue(json["id"], forKey: "id")
                         UserDefaults.standard.setValue(json["token"], forKey: "token")
                         UserDefaults.standard.setValue(json["avatar"], forKey: "avatar")
                         UserDefaults.standard.setValue(json["username"], forKey: "username")
                         UserDefaults.standard.setValue(json["email"], forKey: "email")
-                        
-                        defaults.synchronize()
-                        
+                
                         
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         
