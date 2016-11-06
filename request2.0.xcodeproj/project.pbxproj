@@ -13,9 +13,13 @@
 		DC0268D31D9D57AA00542E80 /* request2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC0268D11D9D57AA00542E80 /* request2_0.xcdatamodeld */; };
 		DC0268D51D9D57AA00542E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0268D41D9D57AA00542E80 /* Assets.xcassets */; };
 		DC0268D81D9D57AA00542E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0268D61D9D57AA00542E80 /* LaunchScreen.storyboard */; };
+		DC2899941DCE645100CA4EF4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2899931DCE645100CA4EF4 /* TabViewController.swift */; };
+		DC2899961DCE65E300CA4EF4 /* ActivityUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2899951DCE65E300CA4EF4 /* ActivityUINavigationController.swift */; };
+		DC2899981DCE668B00CA4EF4 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2899971DCE668B00CA4EF4 /* ActivityTableViewController.swift */; };
 		DC63D8FB1DA42BA100613AD4 /* PostUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */; };
 		DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */; };
 		DCD0E2F21DBD093E008F99FD /* AddGagNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */; };
+		DCD857631DCF285200485514 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD857621DCF285200485514 /* ActivityTableViewCell.swift */; };
 		DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */; };
 		DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */; };
 		DCFDB58C1DBCB2590096425D /* AddGagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDB58B1DBCB2590096425D /* AddGagViewController.swift */; };
@@ -34,9 +38,13 @@
 		DC0268D41D9D57AA00542E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC0268D71D9D57AA00542E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0268D91D9D57AA00542E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2899931DCE645100CA4EF4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabViewController.swift; path = ../TabViewController.swift; sourceTree = "<group>"; };
+		DC2899951DCE65E300CA4EF4 /* ActivityUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityUINavigationController.swift; sourceTree = "<group>"; };
+		DC2899971DCE668B00CA4EF4 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUINavigationController.swift; sourceTree = "<group>"; };
 		DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGagNavigationController.swift; sourceTree = "<group>"; };
+		DCD857621DCF285200485514 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		DCFDB58B1DBCB2590096425D /* AddGagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddGagViewController.swift; path = ../AddGagViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 		DC0268C91D9D57AA00542E80 /* request2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				DC2899931DCE645100CA4EF4 /* TabViewController.swift */,
 				DC0268CA1D9D57AA00542E80 /* AppDelegate.swift */,
 				DCFDB58B1DBCB2590096425D /* AddGagViewController.swift */,
 				DC0268CC1D9D57AA00542E80 /* ViewController.swift */,
@@ -97,6 +106,9 @@
 				DC0268D91D9D57AA00542E80 /* Info.plist */,
 				DC0268D11D9D57AA00542E80 /* request2_0.xcdatamodeld */,
 				DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */,
+				DC2899951DCE65E300CA4EF4 /* ActivityUINavigationController.swift */,
+				DC2899971DCE668B00CA4EF4 /* ActivityTableViewController.swift */,
+				DCD857621DCF285200485514 /* ActivityTableViewCell.swift */,
 			);
 			path = request2.0;
 			sourceTree = "<group>";
@@ -241,7 +253,11 @@
 				DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */,
 				DCD0E2F21DBD093E008F99FD /* AddGagNavigationController.swift in Sources */,
 				DC0268CB1D9D57AA00542E80 /* AppDelegate.swift in Sources */,
+				DC2899981DCE668B00CA4EF4 /* ActivityTableViewController.swift in Sources */,
+				DC2899961DCE65E300CA4EF4 /* ActivityUINavigationController.swift in Sources */,
+				DC2899941DCE645100CA4EF4 /* TabViewController.swift in Sources */,
 				DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */,
+				DCD857631DCF285200485514 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -88,11 +88,11 @@ class PostTableViewController: UITableViewController {
     func clear_data(){
         
         
-        UserDefaults.standard.setValue("", forKey: "id")
-        UserDefaults.standard.setValue("", forKey: "token")
-        UserDefaults.standard.setValue("", forKey: "avatar")
-        UserDefaults.standard.setValue("", forKey: "username")
-        UserDefaults.standard.setValue("", forKey: "email")
+        UserDefaults.standard.setValue(nil, forKey: "id")
+        UserDefaults.standard.setValue(nil, forKey: "token")
+        UserDefaults.standard.setValue(nil, forKey: "avatar")
+        UserDefaults.standard.setValue(nil, forKey: "username")
+        UserDefaults.standard.setValue(nil, forKey: "email")
         
         self.displayNewAlert(AlertMessage: "cleared")
 

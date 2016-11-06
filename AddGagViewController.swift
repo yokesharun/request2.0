@@ -120,7 +120,7 @@ class AddGagViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     func cancel_button(){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PostNav") as! PostUINavigationController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MasterTabView") as! TabViewController
         self.present(nextViewController, animated:true, completion:nil)
     }
     
