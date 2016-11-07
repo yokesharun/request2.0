@@ -18,6 +18,8 @@
 		DC2899981DCE668B00CA4EF4 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2899971DCE668B00CA4EF4 /* ActivityTableViewController.swift */; };
 		DC63D8FB1DA42BA100613AD4 /* PostUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */; };
 		DCA8E1531D9EDF9800A2E811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */; };
+		DCA961771DD12C9600E89A9D /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA961761DD12C9600E89A9D /* FeaturedCollectionViewCell.swift */; };
+		DCA961791DD12D7B00E89A9D /* FeaturedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA961781DD12D7B00E89A9D /* FeaturedCollectionViewController.swift */; };
 		DCD0E2F21DBD093E008F99FD /* AddGagNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */; };
 		DCD857631DCF285200485514 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD857621DCF285200485514 /* ActivityTableViewCell.swift */; };
 		DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */; };
@@ -43,6 +45,8 @@
 		DC2899971DCE668B00CA4EF4 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		DC63D8FA1DA42BA000613AD4 /* PostUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUINavigationController.swift; sourceTree = "<group>"; };
 		DCA8E1521D9EDF9800A2E811 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DCA961761DD12C9600E89A9D /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCA961781DD12D7B00E89A9D /* FeaturedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewController.swift; sourceTree = "<group>"; };
 		DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGagNavigationController.swift; sourceTree = "<group>"; };
 		DCD857621DCF285200485514 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				DC2899951DCE65E300CA4EF4 /* ActivityUINavigationController.swift */,
 				DC2899971DCE668B00CA4EF4 /* ActivityTableViewController.swift */,
 				DCD857621DCF285200485514 /* ActivityTableViewCell.swift */,
+				DCA961761DD12C9600E89A9D /* FeaturedCollectionViewCell.swift */,
+				DCA961781DD12D7B00E89A9D /* FeaturedCollectionViewController.swift */,
 			);
 			path = request2.0;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0268CD1D9D57AA00542E80 /* ViewController.swift in Sources */,
+				DCA961791DD12D7B00E89A9D /* FeaturedCollectionViewController.swift in Sources */,
 				DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */,
+				DCA961771DD12C9600E89A9D /* FeaturedCollectionViewCell.swift in Sources */,
 				DC0268D31D9D57AA00542E80 /* request2_0.xcdatamodeld in Sources */,
 				DC63D8FB1DA42BA100613AD4 /* PostUINavigationController.swift in Sources */,
 				DCFDB58C1DBCB2590096425D /* AddGagViewController.swift in Sources */,
