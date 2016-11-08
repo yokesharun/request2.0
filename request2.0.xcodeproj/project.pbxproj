@@ -22,6 +22,10 @@
 		DCA961791DD12D7B00E89A9D /* FeaturedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA961781DD12D7B00E89A9D /* FeaturedCollectionViewController.swift */; };
 		DCD0E2F21DBD093E008F99FD /* AddGagNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */; };
 		DCD857631DCF285200485514 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD857621DCF285200485514 /* ActivityTableViewCell.swift */; };
+		DCE38E131DD1DB7F00C07DCA /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE38E121DD1DB7E00C07DCA /* SectionCollectionViewCell.swift */; };
+		DCE38E171DD1F3F200C07DCA /* SectionUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE38E161DD1F3F200C07DCA /* SectionUINavigationController.swift */; };
+		DCE38E191DD208D600C07DCA /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE38E181DD208D600C07DCA /* SectionViewController.swift */; };
+		DCE38E1B1DD219DB00C07DCA /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE38E1A1DD219DB00C07DCA /* SectionTableViewCell.swift */; };
 		DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */; };
 		DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */; };
 		DCFDB58C1DBCB2590096425D /* AddGagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDB58B1DBCB2590096425D /* AddGagViewController.swift */; };
@@ -49,6 +53,10 @@
 		DCA961781DD12D7B00E89A9D /* FeaturedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewController.swift; sourceTree = "<group>"; };
 		DCD0E2F11DBD093E008F99FD /* AddGagNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGagNavigationController.swift; sourceTree = "<group>"; };
 		DCD857621DCF285200485514 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		DCE38E121DD1DB7E00C07DCA /* SectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCE38E161DD1F3F200C07DCA /* SectionUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionUINavigationController.swift; sourceTree = "<group>"; };
+		DCE38E181DD208D600C07DCA /* SectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		DCE38E1A1DD219DB00C07DCA /* SectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		DCF875DD1DA35E97009BCF9E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DCF875DF1DA35ED4009BCF9E /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		DCFDB58B1DBCB2590096425D /* AddGagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddGagViewController.swift; path = ../AddGagViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 				DCD857621DCF285200485514 /* ActivityTableViewCell.swift */,
 				DCA961761DD12C9600E89A9D /* FeaturedCollectionViewCell.swift */,
 				DCA961781DD12D7B00E89A9D /* FeaturedCollectionViewController.swift */,
+				DCE38E121DD1DB7E00C07DCA /* SectionCollectionViewCell.swift */,
+				DCE38E161DD1F3F200C07DCA /* SectionUINavigationController.swift */,
+				DCE38E181DD208D600C07DCA /* SectionViewController.swift */,
+				DCE38E1A1DD219DB00C07DCA /* SectionTableViewCell.swift */,
 			);
 			path = request2.0;
 			sourceTree = "<group>";
@@ -251,12 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE38E191DD208D600C07DCA /* SectionViewController.swift in Sources */,
 				DC0268CD1D9D57AA00542E80 /* ViewController.swift in Sources */,
 				DCA961791DD12D7B00E89A9D /* FeaturedCollectionViewController.swift in Sources */,
+				DCE38E171DD1F3F200C07DCA /* SectionUINavigationController.swift in Sources */,
 				DCF875E01DA35ED4009BCF9E /* PostTableViewController.swift in Sources */,
 				DCA961771DD12C9600E89A9D /* FeaturedCollectionViewCell.swift in Sources */,
 				DC0268D31D9D57AA00542E80 /* request2_0.xcdatamodeld in Sources */,
 				DC63D8FB1DA42BA100613AD4 /* PostUINavigationController.swift in Sources */,
+				DCE38E131DD1DB7F00C07DCA /* SectionCollectionViewCell.swift in Sources */,
+				DCE38E1B1DD219DB00C07DCA /* SectionTableViewCell.swift in Sources */,
 				DCFDB58C1DBCB2590096425D /* AddGagViewController.swift in Sources */,
 				DCF875DE1DA35E97009BCF9E /* PostTableViewCell.swift in Sources */,
 				DCD0E2F21DBD093E008F99FD /* AddGagNavigationController.swift in Sources */,

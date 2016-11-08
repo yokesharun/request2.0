@@ -25,14 +25,6 @@ class ActivityTableViewController: UITableViewController {
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        if(UserDefaults.standard.value(forKey: "id") == nil){
-            
-            let loginview = storyBoard.instantiateViewController(withIdentifier: "LoginForm") as! ViewController
-            self.present(loginview, animated:true, completion:nil)
-            
-        }
-        
-        
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         //adding refresh button
@@ -41,7 +33,16 @@ class ActivityTableViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = refresh_button
         
-        init_activity()
+        if(UserDefaults.standard.value(forKey: "id") == nil){
+            
+            let loginview = storyBoard.instantiateViewController(withIdentifier: "LoginForm") as! ViewController
+            self.present(loginview, animated:true, completion:nil)
+            
+        }else{
+        
+            init_activity()
+        
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

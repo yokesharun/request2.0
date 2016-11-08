@@ -13,10 +13,15 @@ import Alamofire
 class FeaturedCollectionViewController: UIViewController {
     
     var feature = [AllFeature]()
+    
+    var fullsection = [Section]()
 
     @IBOutlet weak var FeatureCollection: UICollectionView!
+    @IBOutlet weak var SectionCollection: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         Alamofire.request("http://6gag.co/v1/featured",method: .get).responseJSON { response in
             
@@ -39,12 +44,43 @@ class FeaturedCollectionViewController: UIViewController {
                     self.FeatureCollection.reloadData()
 
                     
+                }else if(json["success"] as! Bool == false){
+                    self.displayNewAlert(AlertMessage: json["error_messages"] as! String!)
+                }
+            }
+        }
+        
+        // section loop
+        
+        
+        Alamofire.request("http://6gag.co/v1/sections",method: .get).responseJSON { response in
+            
+            if let json = response.result.value as? [String: Any] {
+                
+                if(json["success"] as! Bool == true){
+                    
+                    guard let results = json["sections"] as? [[String:AnyObject]] else { return }
+                    
+                    for result in results {
+                        print(result["name"])
+                        let singlesection = Section()
+                        
+                        singlesection.sectionTitle = result["name"] as! String
+                        singlesection.sectionID = result["id"] as! Int
+                        
+                        self.fullsection.append(singlesection)
+                    }
+                    
+                    self.SectionCollection.reloadData()
+                    
                     
                 }else if(json["success"] as! Bool == false){
                     self.displayNewAlert(AlertMessage: json["error_messages"] as! String!)
                 }
             }
         }
+        
+        // end of section loop
         
     }
 
@@ -67,27 +103,60 @@ class AllFeature {
     var title = ""
 }
 
+class Section {
+    var sectionTitle = ""
+    var sectionID:Int = 0
+}
+
 
 extension FeaturedCollectionViewController : UICollectionViewDataSource{
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return feature.count
+        var counting:Int = 0
+        if(collectionView == FeatureCollection){
+            counting = feature.count
+        }else if(collectionView == SectionCollection){
+            counting = fullsection.count
+        }
+        return counting
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureCell", for: indexPath) as! FeaturedCollectionViewCell
         
-        let getfeature = feature[indexPath.row]
-        cell.FeatureTitle.text = getfeature.title
-        let url = NSURL(string: getfeature.image )
-        let data = NSData(contentsOf: url! as URL)
-        cell.FeatureImage.image = UIImage(data: data as! Data )
         
-        return cell
+        if(collectionView == FeatureCollection){
+
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureCell", for: indexPath) as! FeaturedCollectionViewCell
         
+            let getfeature = feature[indexPath.row]
+            cell.FeatureTitle.text = getfeature.title
+            let url = NSURL(string: getfeature.image )
+            let data = NSData(contentsOf: url! as URL)
+            cell.FeatureImage.image = UIImage(data: data as! Data )
+            
+            return cell
+
+            
+        }
+        
+            
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionCollectionViewCell
+        
+            let getsection = fullsection[indexPath.row]
+            cell.SectionButton.setTitle(getsection.sectionTitle, for: .normal)
+            cell.SectionButton.tag = getsection.sectionID
+        
+            return cell
+            
+
     }
+    
 }
