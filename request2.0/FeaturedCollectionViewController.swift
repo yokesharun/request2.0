@@ -23,6 +23,7 @@ class FeaturedCollectionViewController: UIViewController {
         super.viewDidLoad()
 
         
+        
         Alamofire.request("http://6gag.co/v1/featured",method: .get).responseJSON { response in
             
             if let json = response.result.value as? [String: Any] {
@@ -153,7 +154,6 @@ extension FeaturedCollectionViewController : UICollectionViewDataSource{
             let getsection = fullsection[indexPath.row]
             cell.SectionButton.setTitle(getsection.sectionTitle, for: .normal)
             cell.SectionButton.tag = getsection.sectionID
-        
             return cell
             
 
